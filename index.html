@@ -1,107 +1,286 @@
 <!DOCTYPE html>
 
-    <html lang="en">
+<html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Web Personal Ra1CK</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Personal Ra1CK</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/estilos.css" />
+</head>
 
-    </head>
+<body>
 
-    <body>
+    <!-- Creamos una barra de navegación con fondo oscuro -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-        <!-- Creamos una barra de navegación con fondo oscuro -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+        <!-- Ponemos título a la barra de navegación -->
+        <a class="navbar-brand" href="#">
+            <img src="data:image/jpeg;base64,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"
+                class="d-inline-block align-top rounded-circle" height="30" width="30" />
+            Ra1CK
+        </a>
 
-            <!-- Ponemos título a la barra de navegación -->
-            <a class="navbar-brand" href="#">Ra1CK</a>
 
-            <!-- botón para desplegar el menú en modo responsivo -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#entradas_menu">
-                <!-- Esto hace que se vean las tres rayas del botón-->
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- botón para desplegar el menú en modo responsivo -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#entradas_menu">
+            <!-- Esto hace que se vean las tres rayas del botón-->
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- Las entradas del menú propiamente dichas, 
+        <!-- Las entradas del menú propiamente dichas, 
             fíjate que el ID coincida con el data-target del 
             botón de arriba -->
 
-            <div class="collapse navbar-collapse" id="entradas_menu">
+        <div class="collapse navbar-collapse" id="entradas_menu">
 
-                <!--Los menús se hacen con listas-->
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" id="menu_inicio">Inicio</a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav-link" href="#" id="menu_desarrollo_web">Web</a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav-link" href="#" id="menu_desarrollo_java">Java</a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav-link" href="#" id="menu_base_de_datos">Bases De Datos</a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav-link" href="#" id="menu_contacto">Contacto</a>
-                    </li>
-                </ul>
-
-            </div>
-
-        </nav>
-
-
-        <div class="container">
-
-            <div id="panel_inicio" class="panel">
-                <p>Inicio</p>
-            </div>
-
-            <div id="panel_desarrollo_web" class="panel">
-                <p>Desarrollo Web</p>
-            </div>
-
-            <div id="panel_desarrollo_java" class="panel">
-                <p>Programas Java</p>
-            </div>
-
-            <div id="panel_base_de_datos" class="panel">
-                <p>Bases de Datos</p>
-            </div>
-
-            <div id="panel_contacto" class="panel">
-                <p>contacto</p>
-            </div>
+            <!--Los menús se hacen con listas-->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="menu_inicio">Inicio</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav-link" href="#" id="menu_desarrollo_web">Web</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav-link" href="#" id="menu_desarrollo_java">Java</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav-link" href="#" id="menu_base_de_datos">Bases De Datos</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav-link" href="#" id="menu_contacto">Contacto</a>
+                </li>
+            </ul>
 
         </div>
 
+    </nav>
 
-        <!-- JavaScript -->
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous">
+    <div class="container">
+
+        <div id="panel_inicio" class="panel">
+            <h3>Desarrollador Freelance</h3>
+
+            <div class="row">
+                <div class="col-sm-4">
+
+                    <div class="card">
+                        <img class="card-img-top" src="Img/CSS3_and_HTML5.svg" alt="Desarrollo Web">
+                        <div class="card-body">
+                            <h5 class="card-title">Desarrollo Web</h5>
+                            <p class="card-text">
+
+                            <ul>
+                                <li>HTML5</li>
+                                <li>JavaScript Vanilla</li>
+                                <li>CSS3</li>
+                                <li>WebApps</li>
+                            </ul>
+
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-sm-4">
+
+                    <div class="card">
+                        <img class="card-img-top" src="img/Bases_de_datos_de_particulares.jpg" alt="Desarrollo Web">
+                        <div class="card-body">
+                            <h5 class="card-title">Bases de datos</h5>
+                            <p class="card-text">
+
+                            <ol>
+                                <li>
+                                    1. SQL
+                                    <ul>
+                                        <li>a. Oracle</li>
+                                        <li>b. MySQL</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    2. NoSQL
+                                    <ul>
+                                        <li>a. Redis</li>
+                                        <li>b. Mongo DB</li>
+                                        <li>c. Firebase</li>
+                                    </ul>
+                                </li>
+
+
+                            </ol>
+
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-sm-4">
+
+                    <div class="card">
+                        <img class="card-img-top" alt="Desarrollo Web">
+                        <div class="card-body">
+                            <h5 class="card-title">Desarrollo Web</h5>
+                            <p class="card-text">
+
+                            <ol>
+                                <li>
+                                    1. Lenguajes de programación
+                                    <ul>
+                                        <li>a. Bash</li>
+                                        <li>b. PowerShell</li>
+                                        <li>c. Python</li>
+                                        <li>d. Java</li>
+                                        <li>e. JavaScript</li>
+                                        <li>f. C (Arduino)</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    2. Programación lado cliente (Frontend)
+                                    <ul>
+                                        <li>a. React</li>
+                                        <li>b. Angular</li>
+                                        <li>c. Android</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    3. Programación lado servidor (backend)
+                                    <ul>
+                                        <li>a. NodeJS</li>
+                                        <li>b. Spring Java</li>
+                                        <li>c. Java Servlets</li>
+                                    </ul>
+                                </li>
+
+                            </ol>
+
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div id="panel_desarrollo_web" class="panel">
+            <p>Desarrollo Web</p>
+
+            <ul>
+                <li>HTML5</li>
+                <li>JavaScript Vanilla</li>
+                <li>CSS3</li>
+                <li>WebApps</li>
+            </ul>
+
+        </div>
+
+        <div id="panel_desarrollo_java" class="panel">
+            <p>Programas Java</p>
+
+            <ol>
+                <li>
+                    1. Lenguajes de programación
+                    <ul>
+                        <li>a. Bash</li>
+                        <li>b. PowerShell</li>
+                        <li>c. Python</li>
+                        <li>d. Java</li>
+                        <li>e. JavaScript</li>
+                        <li>f. C (Arduino)</li>
+                    </ul>
+                </li>
+
+                <li>
+                    2. Programación lado cliente (Frontend)
+                    <ul>
+                        <li>a. React</li>
+                        <li>b. Angular</li>
+                        <li>c. Android</li>
+                    </ul>
+                </li>
+
+                <li>
+                    3. Programación lado servidor (backend)
+                    <ul>
+                        <li>a. NodeJS</li>
+                        <li>b. Spring Java</li>
+                        <li>c. Java Servlets</li>
+                    </ul>
+                </li>
+
+            </ol>
+
+        </div>
+
+        <div id="panel_base_de_datos" class="panel">
+            <p>Bases de Datos</p>
+
+            <ol>
+                <li>
+                    1. SQL
+                    <ul>
+                        <li>a. Oracle</li>
+                        <li>b. MySQL</li>
+                    </ul>
+                </li>
+
+                <li>
+                    2. NoSQL
+                    <ul>
+                        <li>a. Redis</li>
+                        <li>b. Mongo DB</li>
+                        <li>c. Firebase</li>
+                    </ul>
+                </li>
+
+
+            </ol>
+
+        </div>
+
+        <div id="panel_contacto" class="panel">
+            <p>contacto</p>
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
         </script>
 
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
         </script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-            crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
         </script>
 
 
-        <script src="js/controlador.js"></script>
+    <script src="js/controlador.js"></script>
 
-        <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 
-    </body>
+</body>
 
 </html>
