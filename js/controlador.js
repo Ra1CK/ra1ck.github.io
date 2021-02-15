@@ -46,7 +46,7 @@ $.controller.activate = function (panel_name) {
 
     // console.log("cambio old::"+$.controller.active_panel+" new::"+panel_name);
 
-    $($.controller.active_panel).hide();
+    $($.controller.active_panel).hide("fast", "swing");
     $(panel_name).show();
     $.controller.active_panel = panel_name;
 
@@ -82,7 +82,7 @@ $.controller.init = function (panel_inicial) {
 
     });
 
-    $("div.panel").hide();
+    $("div.panel").hide("fast", "swing");
     $(panel_inicial).show();
     $.controller.active_panel = panel_inicial;
     $.controller.panel_inicial = panel_inicial;
