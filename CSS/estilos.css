@@ -1,7 +1,14 @@
-
+body {background-color: #f9d5e5; }
 
 div.card>img {
     background-color: dimgray;
     padding: 0.4rem;
 }
 
+div.navbar {
+    color: aqua;
+}
+
+.menu-bar {
+    background-image: linear-gradient(-90deg, #b700ff, #ff00006b);
+}
